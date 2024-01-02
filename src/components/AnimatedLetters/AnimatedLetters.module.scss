@@ -1,15 +1,19 @@
 @import "./../../styles/settings.scss";
 
+.parent {
+    position: relative;
+}
+
 .textAnimate {
     display: inline-block;
     opacity: 0;
     animation: bounceIn 1s 1s;
-    animation-fill-mode: forwards;
-    min-width: 10px;
+    animation-fill-mode: forwards !important;
 }
 
 @for $i from 1 through 35 {
-    .textAnimate._#{$i} {
-        animation-delay: #{$i /10}s;
+    .delay_#{$i} {
+        
+        animation-delay: #{$i / 2}s;
     }
 }

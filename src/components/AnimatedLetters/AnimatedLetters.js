@@ -1,12 +1,12 @@
 import  styles  from './AnimatedLetters.module.scss';
 
-const AnimatedLetters = ({ letterClass, strArray, index }) => {
-
+const AnimatedLetters = ({ strArray }) => {
+console.log(styles);
     return (
-        <span>
+        <span className={styles.parent}>
             {
                 strArray.map((char, i) => (
-                    <span key={char + i} className={`${styles[letterClass]} _${i + index}`}>
+                    <span key={char + i} className={`${styles["textAnimate"]} ${styles["delay_"+i]} animate__animated animate__bounceIn`}> 
                         {char}
                     </span>
                 ))
